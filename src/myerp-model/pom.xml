@@ -7,11 +7,11 @@
     <!-- Project informations -->
     <!-- =============================================================== -->
     <!-- ===== Parent ===== -->
-    <parent>
-        <groupId>com.dummy.myerp</groupId>
-        <artifactId>myerp</artifactId>
-        <version>1.x.x-SNAPSHOT</version>
-        <relativePath>..</relativePath>
+   <parent>
+         <groupId>com.dummy.myerp</groupId>
+    <artifactId>myerp</artifactId>
+    <version>3.0.0-multi-module-SNAPSHOT</version>
+          <relativePath />
     </parent>
 
     <!-- ===== Maven ===== -->
