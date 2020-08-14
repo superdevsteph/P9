@@ -1,2 +1,2 @@
 language: java
-script: mvn --batch-mode --file ./src/pom.xml clean test -P test-consumer,test-business
+script: - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=superdevsteph_P9
