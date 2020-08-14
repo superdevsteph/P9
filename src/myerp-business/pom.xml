@@ -73,9 +73,7 @@
         <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
-                <version>5.1.0</version><!--$NO-MVN-MAN-VER$-->
-                <scope>test</scope>
-            </dependency>
+              </dependency>
 
         <!-- ===== Database (pour les tests) ===== -->
         <!-- Pool de connexion -->

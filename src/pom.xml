@@ -46,6 +46,7 @@
         <java.version>1.8</java.version>
         <maven.build.timestamp.format>dd/MM/yyyy</maven.build.timestamp.format>
         <buildTime>${maven.build.timestamp}</buildTime>
+        <checkstyle.excludes>**/com/dummy/myerp/consumer/client/ws/**</checkstyle.excludes>
 
         <!-- ===== Application properties ===== -->
         <application.name>MyERP</application.name>
@@ -53,13 +54,12 @@
         <!-- ===== Version properties ===== -->
         <log4j.version>2.8.1</log4j.version>
         <spring.version>4.3.7.RELEASE</spring.version>
+        
         <sonar.host.url>http://91.162.99.141:29000</sonar.host.url>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.language>java</sonar.language>
-		<sonar.projectKey>superdevsteph_P9</sonar.projectKey>
-		<sonar.organization>superdevsteph</sonar.organization>
-		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
+
 
     <!-- =============================================================== -->
     <!-- Modules -->
