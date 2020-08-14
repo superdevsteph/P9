@@ -1,12 +1,2 @@
 language: java
-os: osx
-
-addons:
-  sonarcloud:
-    organization: "superdevsteph"
-    token:
-      secure: "**************************" # encrypted value of your token
-
-script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=superdevsteph_P9
+script: mvn --batch-mode --file ./src/pom.xml clean test -P test-consumer,test-business
