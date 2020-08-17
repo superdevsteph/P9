@@ -53,10 +53,14 @@
 
         <!-- ========== Test Dependencies ========== -->
         <!-- ===== Tests ===== -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter</artifactId>
+    
+				<scope>test</scope>
+</dependency>
+
 
         <!-- ===== JSR 303 - Bean validation ===== -->
         <!-- implementation -->
