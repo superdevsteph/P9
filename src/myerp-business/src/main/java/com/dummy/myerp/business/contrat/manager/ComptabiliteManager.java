@@ -5,7 +5,9 @@ import java.util.List;
 import com.dummy.myerp.model.bean.comptabilite.CompteComptable;
 import com.dummy.myerp.model.bean.comptabilite.EcritureComptable;
 import com.dummy.myerp.model.bean.comptabilite.JournalComptable;
+import com.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable;
 import com.dummy.myerp.technical.exception.FunctionalException;
+import com.dummy.myerp.technical.exception.NotFoundException;
 
 
 /**
@@ -35,6 +37,16 @@ public interface ComptabiliteManager {
      * @return {@link List}
      */
     List<EcritureComptable> getListEcritureComptable();
+    
+    
+    /**
+     * Renvoie l'Écriture Comptable d'id {@code pId}.
+     *
+     * @param pId l'id de l'écriture comptable
+     * @return {@link EcritureComptable}
+     * @throws NotFoundException : Si l'écriture comptable n'est pas trouvée
+     */
+    EcritureComptable getEcritureComptable(Integer pId) throws NotFoundException;
 
     /**
      * Ajoute une référence à l'écriture comptable.
@@ -50,7 +62,7 @@ public interface ComptabiliteManager {
      * <p><strong>Attention :</strong> l'écriture n'est pas enregistrée en persistance</p>
      * @param pEcritureComptable L'écriture comptable concernée
      */
-    void addReference(EcritureComptable pEcritureComptable);
+    void addReference(EcritureComptable pEcritureComptable) throws FunctionalException, NotFoundException;
 
     /**
      * Vérifie que l'Ecriture comptable respecte les règles de gestion.
@@ -82,4 +94,13 @@ public interface ComptabiliteManager {
      * @param pId l'id de l'écriture
      */
     void deleteEcritureComptable(Integer pId);
+    
+ // ==================== SequenceEcritureComptable ====================
+
+    /**
+     * Insert une nouvelle séquence écriture comptable ou en met une déjà existante à jour.
+     *
+     * @param pSequence -
+     */
+    void upsertSequenceEcritureComptable(SequenceEcritureComptable pSequence);
 }

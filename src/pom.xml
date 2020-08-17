@@ -130,6 +130,10 @@
     <dependencyManagement>
         <dependencies>
         <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-log4j2</artifactId>
+</dependency>  
+        <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -353,7 +357,7 @@
 			<plugin>
 		<groupId>org.jacoco</groupId>
 		<artifactId>jacoco-maven-plugin</artifactId>
-		<version>0.8.5</version>
+		<version>0.8.5</version><!--$NO-MVN-MAN-VER$-->
 		<executions>
 			<execution>
 				<goals>

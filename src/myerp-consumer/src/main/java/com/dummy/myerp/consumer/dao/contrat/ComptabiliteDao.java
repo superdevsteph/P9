@@ -14,12 +14,16 @@ import com.dummy.myerp.technical.exception.NotFoundException;
  */
 public interface ComptabiliteDao {
 
+    // ==================== CompteComptable ====================
+
     /**
      * Renvoie la liste des Comptes Comptables
      * @return {@link List}
      */
     List<CompteComptable> getListCompteComptable();
 
+
+    // ==================== JournalComptable ====================
 
     /**
      * Renvoie la liste des Journaux Comptables
@@ -81,7 +85,8 @@ public interface ComptabiliteDao {
      * @param pId l'id de l'écriture
      */
     void deleteEcritureComptable(Integer pId);
-    
+
+
     // ==================== SequenceEcritureComptable ====================
 
     /**
@@ -97,5 +102,4 @@ public interface ComptabiliteDao {
      * @param pSequence -
      */
     void upsertSequenceEcritureComptable(SequenceEcritureComptable pSequence);
-    
 }
