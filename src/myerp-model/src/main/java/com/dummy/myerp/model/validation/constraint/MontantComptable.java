@@ -13,15 +13,18 @@ import javax.validation.constraints.Digits;
 /**
  * Contrainte à apposer sur les attibuts de type "montant comptable"
  *
+ * <p>
  *  Cette contrainte est composée de :
  *  <ul>
- *      <li>@{@link Digits}</li>
+ *      <li>{@link @Digits}</li>
  *  </ul>
- *
+ * </p>
+ * <p>
  *  Types supportés :
  *  <ul>
  *      <li>{@link java.math.BigDecimal}</li>
  *  </ul>
+ * </p>
  */
 @Digits(integer = 13, fraction = 2)
 @Target({ ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE })

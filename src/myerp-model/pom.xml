@@ -7,11 +7,11 @@
     <!-- Project informations -->
     <!-- =============================================================== -->
     <!-- ===== Parent ===== -->
-   <parent>
-         <groupId>com.dummy.myerp</groupId>
-    <artifactId>myerp</artifactId>
-    <version>3.0.0-multi-module-SNAPSHOT</version>
-          <relativePath />
+    <parent>
+        <groupId>com.dummy.myerp</groupId>
+        <artifactId>myerp</artifactId>
+        <version>1.x.x-SNAPSHOT</version>
+        <relativePath>..</relativePath>
     </parent>
 
     <!-- ===== Maven ===== -->
@@ -53,15 +53,10 @@
 
         <!-- ========== Test Dependencies ========== -->
         <!-- ===== Tests ===== -->
-  <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-<dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter-api</artifactId>
-    <version>5.7.0-M1</version>
-    <scope>test</scope>
-</dependency>
-
-             
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+        </dependency>
 
         <!-- ===== JSR 303 - Bean validation ===== -->
         <!-- implementation -->

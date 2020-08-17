@@ -15,6 +15,8 @@ import com.dummy.myerp.technical.exception.NotFoundException;
  */
 public interface ComptabiliteManager {
 
+    // ==================== CompteComptable ====================
+
     /**
      * Renvoie la liste des comptes comptables.
      *
@@ -22,6 +24,8 @@ public interface ComptabiliteManager {
      */
     List<CompteComptable> getListCompteComptable();
 
+
+    // ==================== JournalComptable ====================
 
     /**
      * Renvoie la liste des journaux comptables.
@@ -31,14 +35,15 @@ public interface ComptabiliteManager {
     List<JournalComptable> getListJournalComptable();
 
 
+    // ==================== EcritureComptable ====================
+
     /**
      * Renvoie la liste des écritures comptables.
      *
      * @return {@link List}
      */
     List<EcritureComptable> getListEcritureComptable();
-    
-    
+
     /**
      * Renvoie l'Écriture Comptable d'id {@code pId}.
      *
@@ -50,14 +55,15 @@ public interface ComptabiliteManager {
 
     /**
      * Ajoute une référence à l'écriture comptable.
-     *
-     * <strong>RG_Compta_5 : </strong>
-     * La référence d'une écriture comptable est composée du code du journal dans lequel figure l'écriture
-     * suivi de l'année et d'un numéro de séquence (propre à chaque journal) sur 5 chiffres incrémenté automatiquement
-     * à chaque écriture. Le formatage de la référence est : XX-AAAA/#####.
-     * <br>
-     * Ex : Journal de banque (BQ), écriture au 31/12/2016
-     * <pre>BQ-2016/00001</pre>
+     * <p>
+     *  <strong>RG_Compta_5 : </strong>
+     *  La référence d'une écriture comptable est composée du code du journal dans lequel figure l'écriture
+     *  suivi de l'année et d'un numéro de séquence (propre à chaque journal) sur 5 chiffres incrémenté automatiquement
+     *  à chaque écriture. Le formatage de la référence est : XX-AAAA/#####.
+     *  <br>
+     *  Ex : Journal de banque (BQ), écriture au 31/12/2016
+     *  <pre>BQ-2016/00001</pre>
+     * </p>
      *
      * <p><strong>Attention :</strong> l'écriture n'est pas enregistrée en persistance</p>
      * @param pEcritureComptable L'écriture comptable concernée
@@ -94,8 +100,9 @@ public interface ComptabiliteManager {
      * @param pId l'id de l'écriture
      */
     void deleteEcritureComptable(Integer pId);
-    
- // ==================== SequenceEcritureComptable ====================
+
+
+    // ==================== SequenceEcritureComptable ====================
 
     /**
      * Insert une nouvelle séquence écriture comptable ou en met une déjà existante à jour.
